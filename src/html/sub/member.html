@@ -1,0 +1,125 @@
+<include src="../include/sub/head.html"></include>
+<include src="../include/sub/header.html"></include>
+
+<main class="content members">
+    <section class="sub_visual">
+        
+    </section>
+
+    <div class="inner">
+        <h1>Members <span>회원가입</span></h1>
+
+        <form action="/" method='post'>
+            <fieldset>
+                <legend class='hide'>회원가입</legend>
+                <h2>Notice & Terms</h2>
+                <div class="agreement">
+                    <textarea readonly="readonly" disabled>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur molestiae repudiandae harum eaque voluptatum sunt, quae quasi odio earum quis dolores consequuntur nulla veritatis, perspiciatis inventore error! Maiores, facere quas? Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur molestiae repudiandae harum eaque voluptatum sunt, quae quasi odio earum quis dolores consequuntur nulla veritatis, perspiciatis inventore error! Maiores, facere quas?Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur molestiae repudiandae harum eaque voluptatum sunt, quae quasi odio earum quis dolores consequuntur nulla veritatis, perspiciatis inventore error! Maiores, facere quas? </textarea>
+
+                    <input type="checkbox" id="terms" name='terms'>
+                    <label for="terms">위의 내용을 읽어보았으며 동의합니다.</label>                        
+                </div>
+                <h2>Privacy Policy</h2>
+                <div class="agreement">
+                    <textarea readonly="readonly" disabled>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur molestiae repudiandae harum eaque voluptatum sunt, quae quasi odio earum quis dolores consequuntur nulla veritatis, perspiciatis inventore error! Maiores, facere quas? Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur molestiae repudiandae harum eaque voluptatum sunt, quae quasi odio earum quis dolores consequuntur nulla veritatis, perspiciatis inventore error! Maiores, facere quas?Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur molestiae repudiandae harum eaque voluptatum sunt, quae quasi odio earum quis dolores consequuntur nulla veritatis, perspiciatis inventore error! Maiores, facere quas? </textarea>
+
+                    <input type="checkbox" id="terms" name='terms'>
+                    <label for="terms">위의 내용을 읽어보았으며 동의합니다.</label>                        
+                </div>
+
+                <h2>Member Information</h2>
+                <table>
+                    <caption class="hide">회원정보</caption>
+                    <tr>
+                        <th>
+                            <label for="userid">User ID</label>
+                        </th>
+                        <td>
+                            <input type="text" id='userid' name='userid' placeholder='아이디를 입력하세요'>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="pwd">Password</label>
+                        </th>
+                        <td>
+                            <input type="password" id='pwd' name='pwd' placeholder="패스워드를 입력하세요">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="pwd2">Password</label>
+                        </th>
+                        <td>
+                            <input type="password" id='pwd2' name='pwd2' placeholder="패스워드를 재입력하세요">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="email">E-Mail</label>
+                        </th>
+                        <td>
+                            <input type="text" id='email' name='email' placeholder='이메일 아이디를 입력하세요'>
+                            @
+                            <select name="domain" id="domain">
+                                <option value="nate.com" selected>nate.com</option>
+                                <option value="naver.com">naver.com</option>
+                                <option value="google.com">google.com</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="hobby">Interests</label>
+                        </th>
+                        <td>
+                            <input type="checkbox" id='hobby1' name='hobby1' value='graphic'>
+                            <label for="hobby1">그래픽</label>
+                            <input type="checkbox" id='hobby2' name='hobby2' value='music'>
+                            <label for="hobby2">음악</label>
+                            <input type="checkbox" id='hobby3' name='hobby3' value='exhibition'>
+                            <label for="hobby3">전시</label>
+                            <input type="checkbox" id='hobby4' name='hobby4' value='movie'>
+                            <label for="hobby4">영화</label>
+                            <input type="checkbox" id='hobby5' name='hobby5' value='pictures'>
+                            <label for="hobby5">회화</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="work">The work</label>                                    
+                        </th>
+                        <td>
+                            <input type="radio" id='design' name='work' value='design'>
+                            <label for="design">디자인</label>
+                            <input type="radio" id='
+                            Development' name='work' value='Development'>
+                            <label for="Development">개발</label>
+                            <input type="radio" id='molding' name='work' value='molding'>
+                            <label for="molding">조형</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="comment">Leave Comments</label>
+                        </th>
+                        <td>
+                            <textarea name="comments" id="comments" placeholder="이곳에 남기실 말을 적어주세요."></textarea>
+                        </td>
+                    </tr>
+                    <tr>                           
+                        <td colspan='2'>
+                            <input type="submit" value='Sign Up'>
+                        </td>
+                    </tr>                        
+                </table>
+            </fieldset>
+        </form>
+    </div>
+</section>
+
+
+
+</main>
+
+<include src="../include/sub/footer.html"></include>

@@ -1,0 +1,115 @@
+.department {
+    .sub_visual {background:url(../img/con11.png) no-repeat top/cover;
+    }
+
+    .inner {
+        .division {
+            border: 1px solid #ff5f157e;
+            padding: 30px;
+
+            ul {
+                transform: translate(40%,0%);
+                margin-top: 50px;
+
+                li {
+                    margin: 30px 70px;
+
+                    span {
+                        display: inline-block;
+                        padding: 20px 30px;
+                        border-radius: 3px;
+                        @include fointBgColor();
+                        @include mainFontColor();
+                        font-size: 20px;
+                        font-weight: bold;
+                        letter-spacing: 3px;
+                        font-family: 'Abel','Gothic A1';
+                    }
+                    .ceo {
+                        padding: 20px 100px;
+                        margin-left: -8%;
+                    }
+                }
+
+               .oneDepth {
+                   display: flex; justify-content: space-between;
+                   transform: translateX(-45%);
+                   
+                   &::after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top:-20px; left: 49%; 
+                        height: 30vh;
+                        border: 1px solid #ff5e15;   
+                    }
+                   &::before {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top:60px; left: 20%; 
+                        width:600px;
+                        border: 1px solid #ff5e15;   
+                    } 
+               }
+               .oneDepth2 {
+                    display: flex; justify-content: space-between;
+                    transform: translateX(-45%);
+                    position: relative;
+                    margin-bottom: 400px;
+                    &::after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top:-30px; left: 14%; 
+                        height: 9vh;
+                        border: 1px solid #ff5e15;   
+                    }
+                    &::before {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top:-30px; left: 14%; 
+                        width:700px;
+                        border: 1px solid #ff5e15;   
+                    }        
+               }
+               .twoDepth {
+                  position: absolute;
+                  margin-left: -28%;
+                  padding: 10px 28px;
+                
+                  &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top:-30px; left: 20%; 
+                    height: 9vh;
+                    padding: 105px 120px;
+                    border-radius: 3px;
+                    border: 1.5px solid #ff5e15;   
+                }
+                &:nth-of-type(3) {
+                    &::before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top:-30px; left: 14%; 
+                    height: 9vh;
+                    border: 1px solid #ff5e15;  
+                    }   
+                } 
+                  
+                  li {
+                      display: flex; margin: 0px 80px;
+
+                         span { 
+                            @include fointFontColor();
+                            @include mainBgColor();
+                        }
+                    }
+               }
+            }
+        }
+    }
+}

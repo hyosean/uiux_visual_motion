@@ -1,0 +1,422 @@
+$gnb_ht :35px;
+
+body { width:100%; overflow-x: hidden; @include mainBgColor();}
+
+#skip>li>a {
+    position:fixed; top:-50px; left:0px; width:100%; height:50px; 
+    font:bold 15px/50px 'PT Sans Narrow'; color:#fff; text-align:center; z-index:5;
+    letter-spacing: 1.5px;
+    @include subBgColor2();
+}
+
+#header { 
+    width:100%; position: fixed; top:0;left:0;z-index: 4;
+    @include mainBgColor(); opacity: 0.9;
+    .inner {
+       width: 1180px;margin: 0 auto;
+       .gnb_logo {
+            width: 100px;height: 30px;float: left;
+            text-align: center;
+            margin-top: 35px;
+            h1 {
+                font-size: 27px;
+                line-height: 1.2;
+                @include subFontColor3();
+                font-family: 'Oswald';
+            }
+       }
+        #gnb {
+           float: left;    
+            .gnb-wrap {
+                margin-left: 20px;
+                transition: 0.5s;
+                padding-top: 35px;
+               
+                >li {
+                    float: left;
+                    margin-left: 20px;
+                    height:$gnb_ht;
+                    width:200px; 
+                    text-align:center;
+                    border-radius: 3px;
+                    margin-top: 6px;
+                    position: relative;
+
+                    >a {      
+                        width: 100%;
+                        line-height:$gnb_ht;
+                        display: inline-block;
+                        @include subFontColor3();
+                        font-family: 'Teko';
+                        font-size: 20px;
+                        letter-spacing: 5px;  
+                     }
+
+                     .submenu {
+                        position: absolute;
+                        left: 0; top: 34px;
+                        padding-top: 10px;
+                        @include fointBgColor();
+                        display: none;
+
+                        >li {
+                            width: 100%;text-align: left;
+                            
+                            >a {
+                                display:block;height:$gnb_ht;
+                                @include mainFontColor();
+                                font-family: 'Teko';
+                                font-size: 20px; padding: 10px 30px; 
+                                letter-spacing: 5px;
+                            }
+                           
+                            &:hover {
+                                a {
+                                   text-decoration: underline;
+                                }
+                            }
+                            &.on {
+                                a {
+                                    text-decoration: underline;
+                                }            
+                            }
+                        }
+                     }
+                    
+                    &:hover { 
+                        a.mainGnb {
+                            @include fointBgColor();
+                            color: #fff;
+                           font-weight: 500;
+                        }
+                    }
+
+                    &.on {
+                        a.mainGnb {
+                            @include fointBgColor();
+                            color: #fff;
+                           font-weight: 500;
+                        }
+                    }
+
+                }
+            }
+        } 
+
+        .utill {
+            float: right;
+            
+            .sns {
+            float: left; line-height: $gnb_ht;  margin-top: 30px;
+                li {
+                    float: left;margin-right:5px;
+                    a {
+                        display: inline-block;
+                        width:30px;height:$gnb_ht;text-align:center;
+                        @include fointFontColor();
+                        font-family: 'Roboto Mono';
+                     }
+                }
+            }
+            .search {
+                float: left;
+                margin-left: 5px;
+                height: 30px;
+                width: 120px;
+                margin-top: 30px;
+                border-bottom: 1.5px solid #ff5e15;
+                position: relative;
+                
+                fieldset {
+                    position: relative;
+                    display: inline-block;
+                    padding: 0 0 0 40px;
+                    border: none;
+                        input,
+                        button {
+                        position: relative;
+                        width: 200px;
+                        height: 25px;
+                        padding: 0;
+                        display: inline-block;
+
+                        }
+                                                
+                        input {
+                            z-index: 2;
+                            height: 4vmin;
+                            width: 65px;
+                            @include subFontColor3();
+                            @include mainBgColor();
+                            border: 0 none;
+
+                            &::placeholder {
+                                @include fointFontColor();
+                                opacity: 0.5;
+                        }
+                      
+                        }
+                        input:focus {
+                            outline: 0 none;
+                        }
+                        input:focus + button {
+                            -webkit-transform: translate(-30px, 0);
+                                -ms-transform: translate(-30px, 0);
+                                    transform: translate(-30px, 0);
+                            -webkit-transition-duration: 0.3s;
+                                    transition-duration: 0.3s;
+                        }
+                        input:focus + button .fa {
+                            -webkit-transform: translate(3px, 0);
+                                -ms-transform: translate(3px, 0);
+                                    transform: translate(3px, 0);
+                            -webkit-transition-duration: 0.3s;
+                                    transition-duration: 0.3s;
+                             @include subFontColor3();
+                        }
+                        
+                        button {
+                            z-index: 1;
+                            position: absolute;
+                            top: 6.5px;
+                            left: 130px;
+                            width: 25px;
+                            border: 0 none;
+                            @include fointBgColor();
+                            cursor: pointer;
+                            
+                            -webkit-transform: translate(-51px, 0);
+                                -ms-transform: translate(-51px, 0);
+                                    transform: translate(-51px, 0);
+                            -webkit-transition-duration: 0.3s;
+                                    transition-duration: 0.3s;
+                        }
+                        
+                        .fa-search {
+                            font-size: 12px;
+                            @include fointFontColor();
+                            z-index: 3;
+                            top: 25%;
+                            -webkit-transform: translate(-80px, 0);
+                                -ms-transform: translate(-80px, 0);
+                                    transform: translate(-80px, 0);
+                            -webkit-transition-duration: 0.3s;
+                                    transition-duration: 0.3s;
+                            -webkit-transition: all 0.1s ease-in-out;
+                                    transition: all 0.1s ease-in-out;
+                        }
+                        
+                }
+            }
+        }
+
+        .Gnb_hideMenu_m {
+            position: absolute;
+            top:8px; 
+            right: 28px;
+            display: none;
+            width: 50px;
+            height: 100%;  
+
+            .hideMenu_m {
+                position: absolute;
+                top: 50%; right: 0;
+                width: 25px;height:4px;@include subBgColor3(); 
+                cursor: pointer;
+                transition: 0.3s;  z-index: 9;
+                
+                &::after {
+                    content: '';transition: 0.3s;
+                    display: block;margin-top:15px;
+                    width: 25px;height:4px;@include subBgColor3(); 
+                }
+                &::before {
+                    content: ''; display: block;transition: 0.3s;
+                    width: 25px;height:4px;@include subBgColor3(); 
+                    margin-top:-9px;
+                }
+            }
+
+            .hideMenuListWrap_m {
+                position: fixed;
+                top: 65px; right: -60vw; width: 45vw; 
+                height: 100vh;transition: 0.1s;
+                @include fointBgColor();
+
+                .hideMenuList_m {
+                    padding-top: 10px; z-index: -1;
+                    >li {
+                        width: 100%;
+                        border-bottom: 1px solid #312b4f ;
+        
+                        >a {
+                            line-height: 3;margin-left: 30px;
+                            font-size: 25px;
+                            height: 50px;
+                            font-family: 'Teko';
+                            @include mainFontColor();
+                        }
+                        .hideMenuSubList {
+                            border: 1px solid #ff5e15;
+                            width: 100%;
+                            box-sizing: border-box;  
+                            height: 300px;
+                            @include mainBgColor();  
+                            display: none;
+                            transition: all 0.3s;
+                            
+                            >li {
+                              width: 100%;                    
+
+                                >a {
+                                    line-height: 3;margin-left: 30px;
+                                    font-size: 25px;
+                                    font-family: 'Teko';
+                                    height: 50px;
+                                    @include fointFontColor();
+                                    transition: 0.3s;
+
+                                    &:hover {
+                                        border-bottom: 1px solid #ff5e15;
+                                    }
+
+                                }
+                            
+                            }
+                            &.on {
+                                display: block;
+                            } 
+
+                        }
+                    } 
+                    
+                }
+
+
+            }
+            &.on {
+                .hideMenu_m {
+                   height: 0;
+                   @include fointBgColor();
+                    &::after {
+                        transform: translateY(-9px) rotate(225deg);
+                        @include fointBgColor();
+                    }
+                    &::before {
+                        transform: translateY(9px) rotate(-225deg);
+                        @include fointBgColor();
+                    }
+                }
+                .hideMenuListWrap_m {
+                    right: 0;
+                }
+            }
+        
+        }
+        
+
+    }
+    #mNav {
+        width: 20px;
+        position: fixed; 
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%);
+        li {
+            width: 10px;height: 10px;margin-bottom: 30px;background:#f49d50;
+            border-radius: 50%;
+
+            a {
+                display: block;
+                width: 100%; height: 100%;
+            }
+
+            &:last-child {
+                margin-bottom: 0px;
+            }
+            i {
+                display: block;
+                background: #f49d50;
+                width: 0;
+                height: 2px;
+                transform: translateY(4px);
+                transition: 0.3s;
+            }
+        }
+        li.on {
+            i {
+                width: 85px;
+            }
+        }
+    }
+}
+
+/* ------tablet-------- */
+@media screen and (max-width:1179px){
+    #header { 
+        .inner {
+            width: 100%; padding: 0 10px;
+           
+             #gnb {
+                float: left;    
+                 .gnb-wrap {
+                     width: 100%; 
+                     >li {
+                         width:150px;
+                        >a {
+                            font-size: 19px;
+                        } 
+      
+                     }
+                 }
+             } 
+     
+             .utill {
+                 float: right;
+                 
+                 .sns {
+                    display: none;
+                 }
+                 .search {
+                     margin-right: 40px;
+                     margin-top: 35px;
+                
+                 }
+             }
+     
+     
+         }      
+
+        #mNav {
+           display: none;
+        }
+    }
+}
+
+/* ------mobile-------- */
+@media screen and (max-width:539px){ 
+    #header { 
+        .inner {
+            .gnb_logo {
+                h1 {
+                    line-height: 0.5;
+                }
+             }   
+             #gnb {
+                display: none;
+             } 
+     
+             .utill {
+                display: none;
+             }
+
+             .Gnb_hideMenu_m {
+                display: block;
+            }
+         }  
+        
+        #mNav {
+        display: none;
+        }
+    }
+}

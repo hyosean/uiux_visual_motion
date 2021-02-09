@@ -1,0 +1,362 @@
+#section3 {  
+    width: 100%;padding-top: 75px;
+    .inner {
+        width:1180px; margin: auto; 
+        padding-bottom:50px;
+        position: relative;
+       .section3-wrap {
+            width: 900px; 
+            height: 450px;
+            overflow: hidden;
+            margin: 0 auto;
+          
+        .section3-contents {
+            width: 300%; height: 100%; margin-left:-100%;
+         
+            .section3-panel {
+                @include fointBgColor();
+                float: left; opacity: 0.8;
+                width: 33.3333%;height: 0;
+                transition: 0.3s;
+                
+                .section3-in {
+                   width: 70%;padding:60px;
+                        span {
+                            font-size: 16px;
+                            font-style: italic;
+                            letter-spacing: 2px; 
+                            @include mainFontColor();
+                            text-transform: uppercase;
+                            font-family: 'Roboto Mono';
+                            font-weight: bold;
+                            opacity: 0; margin-left: -30px;
+                            transition: 0.5s 0.5s;
+                        }
+                        i { 
+                            display: inline-block;
+                            width: 80px;height: 1.5px;
+                            margin-bottom: 5px;
+                            margin-left: 10px;
+                            @include mainBgColor();
+                            transform: translateX(-10px);
+                            opacity: 0;
+                            transition: 0.5s 0.5s;
+                        }
+                        h1 {
+                            @include mainFontColor();
+                            font-size: 73px;
+                            letter-spacing: 9px;
+                            font-family: 'Teko';
+                            font-weight: bold;
+                            line-height: 1.2;
+                            margin-top: 30px;
+                            opacity: 0;
+                            transition: 0.5s 0.5s;
+                            transform: translateY(-30px);
+                        }
+                }
+            }
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: -30%;
+                left: -30%;
+                opacity: 0.5;
+                transition: 0.5s;
+                z-index: -1;
+                width: 90%;
+                height: 150%;
+                background-image: url(../img/con11.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: bottom;
+                @include fointBgColor();
+            }
+        }
+
+
+        .section3-btn {
+            position: absolute; right: -10%;
+            width: 20%; top:45.5%; 
+        
+            .section3-arrow {
+                width: 50px;height: 50px;display: block;
+                border-radius: 50%;
+                border: 1.5px solid #ff5e15;
+            }
+            #right {
+                position: absolute;
+                top: 50%;left: 8%;
+                transform: translateY(-90px);
+                opacity: 0.5; transition: 0.3s;
+
+                i {
+                    width: 9.5px;
+                    height: 1px;
+                    @include fointBgColor();
+                    display: inline-block;
+                    margin-bottom: 4px;
+                    position: relative;  
+                    padding-top: 0.2px;   
+                    top: 25%;
+                    left: 50%;
+                    transform: translate(-50%, -50%)scale(1.2);
+                    opacity: 0.5; transition: 0.3s;
+              
+                    &::before {
+                        content: '';
+                        width: 5px;
+                        height: 1px;
+                        @include fointBgColor();
+                        display: inline-block;
+                        transform: rotate(45deg);
+                        position: absolute;
+                        top: -2px;
+                        left: 5px;
+                    }
+                    &::after {
+                        content: '';
+                        width: 5px;
+                        height: 1px;
+                        @include fointBgColor();
+                        display: inline-block;
+                        transform: rotate(-45deg);
+                        position: absolute;
+                        top: 2px;
+                        left: 5px;            
+                    }
+                }
+            }
+            #left {
+                position: absolute;
+                top: 50%;left: 8%;
+                transform: rotate(180deg) translateY(15px);
+                opacity: 0.5; transition: 0.3s;
+
+                i {
+                    width: 9.5px;
+                    height: 1px;
+                    @include fointBgColor();
+                    display: inline-block;
+                    margin-bottom: 4px;
+                    position: relative;  
+                    padding-top: 0.2px;
+                    top: 25%;
+                    left: 50%;
+                    transform: translate(-50%, -50%)scale(1.2);
+                    opacity: 0.5; transition: 0.3s;
+
+                    &::before {
+                        content: '';
+                        width: 5px;
+                        height: 1px;
+                        @include fointBgColor();
+                        display: inline-block;
+                        transform: rotate(45deg);
+                        position: absolute;
+                        top: -2px;
+                        left: 5px;
+                    }
+                    &::after {
+                        content: '';
+                        width: 5px;
+                        height: 1px;
+                        @include fointBgColor();
+                        display: inline-block;
+                        transform: rotate(-45deg);
+                        position: absolute;
+                        top: 2px;
+                        left: 5px;            
+                    }
+                }
+            }
+            
+        }
+
+       }
+
+
+    } 
+    &.on {
+        .inner {
+           .section3-wrap {
+              
+            .section3-contents {
+                .section3-panel {
+                    height: 100%; 
+                    opacity: 1;
+
+                    .section3-in {
+                            span {
+                                margin-left: 0;
+                                opacity: 1;
+                            }
+                            i { 
+                                transform: translateX(0);
+                                opacity: 1;
+                            }
+                            h1 {
+                                transform: translateY(0);
+                                opacity: 1;
+                            }
+                    }
+               
+                }
+                &::after {
+                    left: -15%;opacity: 1;
+                }   
+            }
+    
+    
+            .section3-btn {
+            
+                .section3-arrow {
+                    opacity: 1;
+                }
+                #right {
+                    opacity: 1;transform: translateY(-60px);
+                    i {
+                        opacity: 1;
+                    }
+                }
+                #left {
+                    opacity: 1; transform: rotate(180deg) translateY(-5px);
+                    i {
+                        opacity: 1;
+                    }
+                }
+                
+            }
+    
+           }
+    
+    
+        } 
+    }
+}
+
+/* ------tablet-------- */
+@media screen and (max-width:1179px){
+    #section3 {  
+      
+        .inner {
+            width: 100%; 
+           .section3-wrap {
+                width: 100%; 
+                height: 45vmax;
+                margin: 0 50px;
+            .section3-contents {
+               
+                .section3-panel {
+                    
+                    .section3-in {
+                    
+                        h1 {
+                            font-size:8vmax; letter-spacing: 5px;
+                            
+                            span {
+                                font-size: 16px;
+                            }
+                            i { 
+                                width: 60px;
+                            }
+                        }
+                    }
+                }
+             
+            }
+    
+    
+            .section3-btn {
+                right: 5%;
+                width: 10%; 
+            
+                .section3-arrow {
+                    border: 1.5px solid #312b4f ;
+                }
+                #right {
+    
+                    i {
+                        @include mainBgColor();
+                  
+                        &::before {
+                            @include mainBgColor();
+                        }
+                        &::after {
+                            @include mainBgColor();          
+                        }
+                    }
+                }
+                #left {
+                
+                    i {
+                        @include mainBgColor();
+                  
+                        &::before {
+                            @include mainBgColor();
+                        }
+                        &::after {
+                            @include mainBgColor();         
+                        }
+                    }
+                }
+                
+            }
+    
+           }
+    
+    
+        } 
+    }
+}
+
+/* ------mobile-------- */
+@media screen and (max-width:539px){ 
+    #section3 {  
+      
+        .inner {
+            width: 100%; padding-bottom: 0px;
+           .section3-wrap {
+                width: 100%;
+                height: 80vmin;
+                margin: 5px;
+            .section3-contents {
+               
+                .section3-panel {
+                    
+                    .section3-in {
+                        padding: 25px;
+                        h1 {
+                           font-size:5vmax; letter-spacing: 5px;
+                            
+                            span {
+                                font-size: 16px;
+                            }
+                            i { 
+                                width: 60px;
+                            }
+                        }
+                    }
+                }
+                &::after {
+                   display: none;
+                }
+            }
+    
+    
+            .section3-btn {
+                top: 50%;
+                right: 5%;
+                #right {
+                    transform: translateY(-70px);
+                }
+ 
+            }
+    
+           }
+    
+    
+        } 
+    }
+}

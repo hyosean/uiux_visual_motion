@@ -1,0 +1,45 @@
+/* 주조색-테마를 갖춘 메인컬러 */
+
+@mixin mainBgColor() {
+    background-color: #312b4f ;
+};
+@mixin mainFontColor() {
+    color:#312b4f ;
+};
+
+
+/* 보조색-메인컬러의 유사색 */
+
+@mixin subBgColor() {
+    background-color:#383255;
+};
+@mixin subFontColor() {
+    color:#352a68;
+};
+
+@mixin subBgColor2() {
+    background-color: #2c2748;
+};
+@mixin subFontColor2() {
+    color:#2c2748;
+};
+
+/* 보조색-채도와 명도가 낮은 포인트컬러의 유사색 */
+
+@mixin subBgColor3() {
+    background-color:#fff ;
+};
+@mixin subFontColor3() {
+    color:#fff ;
+};
+
+/* 강조색-메인컬러의 보색 계열 */
+
+@mixin fointBgColor() {
+    background-color: #ff5e15;
+    // @include fointBgColor();
+};
+@mixin fointFontColor() {
+    color:#ff5e15;
+    // @include fointFontColor();
+};
